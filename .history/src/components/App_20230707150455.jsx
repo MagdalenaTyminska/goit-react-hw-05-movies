@@ -1,8 +1,8 @@
-import { Routes, Route } from 'react-router-dom';
-import Home from 'path/to/pages/Home';
-import Movies from 'path/to/pages/About';
-import MovieDetails from 'path/to/pages/Products';
-import NotFound from 'path/to/pages/NotFound';
+import { Routes, Route } from "react-router-dom";
+import Home from "path/to/pages/Home";
+import About from "path/to/pages/About";
+import Products from "path/to/pages/Products";
+import NotFound from "path/to/pages/NotFound";
 
 const App = () => {
   return (
