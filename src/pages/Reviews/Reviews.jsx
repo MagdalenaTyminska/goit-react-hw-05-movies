@@ -13,14 +13,10 @@ const Reviews = () => {
       setIsLoading(true);
       setReviews([]);
 
-      try {
-        const movieReviews = await fetchReviews(movieId);
-        setReviews(movieReviews);
-      } catch (err) {
-        console.error(err);
-      } finally {
-        setIsLoading(false);
-      }
+      const movieReviews = await fetchReviews(movieId);
+      setReviews(movieReviews);
+
+      setIsLoading(false);
     };
 
     handleReviews();

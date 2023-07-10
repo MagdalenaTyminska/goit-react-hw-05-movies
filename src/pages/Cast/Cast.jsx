@@ -15,15 +15,10 @@ const Cast = () => {
       setIsLoading(true);
       setCast([]);
 
-      try {
-        const movieCast = await fetchCast(Number(movieId));
-        setCast(movieCast);
-        console.log(movieCast);
-      } catch (err) {
-        console.error(err);
-      } finally {
-        setIsLoading(false);
-      }
+      const movieCast = await fetchCast(Number(movieId));
+      setCast(movieCast);
+
+      setIsLoading(false);
     };
 
     handleCast();

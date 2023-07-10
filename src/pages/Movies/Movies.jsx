@@ -29,15 +29,11 @@ const Movies = () => {
       setIsLoading(true);
       setPageNumber(1);
 
-      try {
-        const movies = await fetchSearch(searchQuery, 1);
-        setSearchMoviesData(movies);
-      } catch (err) {
-        console.error(err);
-      } finally {
-        setIsLoading(false);
-        setPageNumber(p => p + 1);
-      }
+      const movies = await fetchSearch(searchQuery, 1);
+      setSearchMoviesData(movies);
+
+      setIsLoading(false);
+      setPageNumber((p) => p + 1);
     };
 
     handleSearchMovie();

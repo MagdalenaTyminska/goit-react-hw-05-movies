@@ -11,15 +11,9 @@ const Home = () => {
 
   const handleRenderList = async () => {
     setIsLoading(true);
-
-    try {
-      const movies = await fetchTrending();
-      setTrending(movies);
-    } catch (err) {
-      console.error(err);
-    } finally {
-      setIsLoading(false);
-    }
+    const movies = await fetchTrending();
+    setTrending(movies);
+    setIsLoading(false);
   };
 
   useEffect(() => {

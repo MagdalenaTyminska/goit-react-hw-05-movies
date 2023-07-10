@@ -16,14 +16,9 @@ const MovieDetails = () => {
   useEffect(() => {
     const handleMovieDetails = async () => {
       setIsLoading(true);
-      try {
-        const clickedMovieDetails = await fetchDetails(movieId);
-        setDetails(clickedMovieDetails);
-      } catch (err) {
-        console.error(err);
-      } finally {
-        setIsLoading(false);
-      }
+      const clickedMovieDetails = await fetchDetails(movieId);
+      setDetails(clickedMovieDetails);
+      setIsLoading(false);
     };
     handleMovieDetails();
   }, [movieId]);
