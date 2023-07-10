@@ -39,3 +39,5 @@ export const fetchReviews = async movieId => {
   const data = await response.json();
   return data.results;
 };
+
+
